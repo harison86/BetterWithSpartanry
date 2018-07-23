@@ -2,7 +2,9 @@ package com.chaosbuffalo.betterwithspartanry;
 
 import betterwithmods.BWMod;
 import betterwithmods.common.BWMItems;
+import betterwithmods.common.items.ItemMaterial;
 import com.chaosbuffalo.betterwithspartanry.init.SteelCrafting;
+import jline.internal.Log;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
@@ -27,13 +29,14 @@ public class BetterWithSpartanry
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+        // This gets registered too late for Spartan Weaponry's tooltip logic, causes the material not found error display.
+        OreDictionary.registerOre("ingotSoulforgedSteel", ItemMaterial.getMaterial(ItemMaterial.EnumMaterial.INGOT_STEEL));
         logger = event.getModLog();
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-
         SteelCrafting.init();
     }
 }

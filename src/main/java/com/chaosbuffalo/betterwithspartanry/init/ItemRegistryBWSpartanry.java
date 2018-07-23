@@ -1,7 +1,5 @@
 package com.chaosbuffalo.betterwithspartanry.init;
 
-import betterwithmods.BWMod;
-import betterwithmods.common.BWMBlocks;
 import betterwithmods.common.BWMItems;
 import com.chaosbuffalo.betterwithspartanry.BWMMatConverter;
 import com.chaosbuffalo.betterwithspartanry.BetterWithSpartanry;
@@ -11,12 +9,9 @@ import com.oblivioussp.spartanweaponry.init.ModelRenderRegistry;
 import com.oblivioussp.spartanweaponry.item.*;
 import com.oblivioussp.spartanweaponry.util.DamageHelper;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -29,7 +24,7 @@ public class ItemRegistryBWSpartanry {
     static {
         MATERIALS_TO_REGISTER.add(new BWMMatConverter(SOULFORGE_STEEL,
                 utils.spartanMatFromToolMat(SOULFORGE_STEEL, BWMItems.SOULFORGED_STEEL,
-                        9867904, 14999238)));
+                        2565927, 7500402)));
     }
 
     @SubscribeEvent
