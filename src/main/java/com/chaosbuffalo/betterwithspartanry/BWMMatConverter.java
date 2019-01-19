@@ -1,6 +1,6 @@
 package com.chaosbuffalo.betterwithspartanry;
 
-import com.oblivioussp.spartanweaponry.util.ToolMaterialEx;
+import com.oblivioussp.spartanweaponry.api.ToolMaterialEx;
 
 
 /**
