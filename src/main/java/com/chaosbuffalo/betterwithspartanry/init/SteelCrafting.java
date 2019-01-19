@@ -55,6 +55,18 @@ public class SteelCrafting {
         }
     }
 
+	public static void register_boomerang_recipe(String itemName, String... crafting){
+        Item weapon = ForgeRegistries.ITEMS.getValue(new ResourceLocation(BetterWithSpartanry.MODID,
+                itemName + "_" + ItemRegistryBWSpartanry.SOULFORGE_STEEL));
+        if (weapon != null){
+            addSteelShapedRecipe(new ResourceLocation(BetterWithSpartanry.MODID, itemName + "_" + ItemRegistryBWSpartanry.SOULFORGE_STEEL),
+                    new ItemStack(weapon), crafting,
+                    'X', "ingotSoulforgedSteel",
+                    'P', "plankWood"
+					);
+        }
+    }
+
     public static void init(){
         register_recipe("katana", "   X", "  X ", " X  ", "H   ");
         register_recipe("greatsword", " X  ", "XXX ", "XXX ", "XHX ");
@@ -71,8 +83,11 @@ public class SteelCrafting {
         register_recipe("hammer", "XXXX", "XXXX", " HH ", " HH ");
         register_recipe("throwing_knife", "HX");
         register_recipe("javelin", "HXX");
+        register_recipe("battleaxe", " XXX", " XHX", "  H ", "  H ");
+        register_recipe("mace", "  XX", "  HX", " H  ", "H   ");
         register_bow_recipe("longbow", "HWXX", "W  S", "X  S", "XSS ");
         register_crossbow_recipe("crossbow", "BSXX", "SWWS", "XWHS", "XSSH");
+        register_boomerang_recipe("boomerang", "XPPP", "P   ", "P   ", "P   ");
 
 
 
