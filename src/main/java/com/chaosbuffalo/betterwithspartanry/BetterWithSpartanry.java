@@ -17,7 +17,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import org.apache.logging.log4j.Logger;
 
 @Mod(modid = BetterWithSpartanry.MODID, name = BetterWithSpartanry.NAME, version = BetterWithSpartanry.VERSION,
-        dependencies="required-after:betterwithmods;required-after:spartanweaponry@[beta 1.1.2]")
+        dependencies="required-after:betterwithmods;required-after:spartanweaponry@[beta 1.2.0]")
 public class BetterWithSpartanry
 {
     public static final String MODID = "betterwithspartanry";
